@@ -1,21 +1,22 @@
 /* ================================================================
-   Maison Kiki — boxesparty-inspired clean luxury
+   Maison Kiki — Inspired by boxesparty
    ================================================================ */
 
 /* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --black: #111;
-  --white: #fff;
-  --gray-50: #fafafa;
-  --gray-100: #f5f5f5;
-  --gray-200: #e5e5e5;
-  --gray-400: #999;
-  --gray-600: #666;
-  --gold: #c8a46c;
-  --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --cream: #FDFBF7;
+  --navy: #2E2A39;
+  --gold: #E4C891;
+  --gold-dark: #C8A46C;
+  --gray-100: #F5F3EF;
+  --gray-200: #E8E4DD;
+  --gray-400: #A09B95;
+  --gray-600: #6B6660;
+  --white: #FFFFFF;
+  /* Poppins-like geometric sans-serif system stack */
+  --sans: 'Poppins', 'Montserrat', 'Helvetica Neue', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
   --max: 1200px;
 }
 
@@ -24,8 +25,8 @@ html { scroll-behavior: smooth; }
 body {
   font-family: var(--sans);
   font-weight: 400;
-  background: var(--white);
-  color: var(--black);
+  background: var(--cream);
+  color: var(--navy);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -37,8 +38,8 @@ button { cursor: pointer; font-family: inherit; }
 
 /* ── Announcement Bar ── */
 .announcement {
-  background: var(--black);
-  color: var(--white);
+  background: var(--navy);
+  color: var(--cream);
   text-align: center;
   padding: 7px 16px;
   font-size: 11.5px;
@@ -49,29 +50,30 @@ button { cursor: pointer; font-family: inherit; }
 /* ── Navigation ── */
 .nav {
   position: sticky; top: 0; z-index: 1000;
-  background: var(--white);
+  background: var(--cream);
   border-bottom: 1px solid var(--gray-200);
 }
 .nav-inner {
   max-width: var(--max); margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 12px 20px;
+  padding: 14px 20px;
 }
 .nav-logo {
-  font-family: var(--serif);
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: var(--black);
+  color: var(--navy);
+  text-transform: uppercase;
 }
 .nav-cart {
   background: none; border: none; padding: 4px;
   display: flex; align-items: center; position: relative;
-  color: var(--black);
+  color: var(--navy);
 }
+.nav-cart svg { width: 20px; height: 20px; }
 .nav-cart-count {
   position: absolute; top: -3px; right: -7px;
-  background: var(--black); color: var(--white);
+  background: var(--navy); color: var(--cream);
   font-size: 10px; font-weight: 600;
   min-width: 18px; height: 18px;
   border-radius: 9px;
@@ -82,6 +84,7 @@ button { cursor: pointer; font-family: inherit; }
 /* ── Product Grid ── */
 .product {
   max-width: var(--max); margin: 0 auto;
+  background: var(--white);
 }
 @media (min-width: 768px) {
   .product {
@@ -93,7 +96,7 @@ button { cursor: pointer; font-family: inherit; }
 /* ── Gallery ── */
 .product-gallery {
   position: relative;
-  background: var(--gray-50);
+  background: var(--gray-100);
 }
 @media (min-width: 768px) {
   .product-gallery {
@@ -115,11 +118,11 @@ button { cursor: pointer; font-family: inherit; }
 .dot {
   width: 8px; height: 8px;
   border-radius: 50%;
-  background: #bbb;
+  background: #BBB9B3;
   border: none; padding: 0;
   transition: all .2s;
 }
-.dot.active { background: var(--black); width: 24px; border-radius: 4px; }
+.dot.active { background: var(--navy); width: 24px; border-radius: 4px; }
 
 /* ── Product Info ── */
 .product-info {
@@ -137,23 +140,22 @@ button { cursor: pointer; font-family: inherit; }
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: var(--gray-600);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .info-title {
-  font-family: var(--serif);
   font-size: clamp(28px, 4.5vw, 36px);
   font-weight: 600;
-  color: var(--black);
+  color: var(--navy);
   line-height: 1.15;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   letter-spacing: -.3px;
 }
 
 .info-price {
   font-size: 21px;
   font-weight: 600;
-  color: var(--black);
+  color: var(--navy);
   margin-bottom: 4px;
 }
 
@@ -167,7 +169,7 @@ button { cursor: pointer; font-family: inherit; }
 .info-label {
   font-size: 13px;
   font-weight: 500;
-  color: var(--black);
+  color: var(--navy);
   margin-bottom: 10px;
 }
 .info-label strong { font-weight: 600; }
@@ -186,11 +188,11 @@ button { cursor: pointer; font-family: inherit; }
 }
 .swatch:hover { border-color: var(--gray-400); }
 .swatch.selected {
-  border: 2px solid var(--black);
+  border: 2px solid var(--navy);
   box-shadow: 0 0 0 2px var(--white) inset;
 }
-.swatch-gold   { background: linear-gradient(135deg, #d4af69, #c8a46c, #b8944e); }
-.swatch-silver { background: linear-gradient(135deg, #d4d4d4, #c0c0c0, #a8a8a8); }
+.swatch-gold   { background: linear-gradient(135deg, #E8D098, #E4C891, #D4B878); }
+.swatch-silver { background: linear-gradient(135deg, #D8D8D8, #C4C4C4, #AEAEAE); }
 
 /* ── Quantity ── */
 .buy-row { margin-bottom: 12px; }
@@ -203,7 +205,7 @@ button { cursor: pointer; font-family: inherit; }
 .qty-btn {
   width: 42px; height: 46px;
   background: none; border: none;
-  font-size: 18px; color: var(--black);
+  font-size: 18px; color: var(--navy);
   display: flex; align-items: center; justify-content: center;
   transition: background .15s;
 }
@@ -221,8 +223,8 @@ button { cursor: pointer; font-family: inherit; }
 .btn-atc {
   display: block; width: 100%;
   padding: 15px 24px;
-  background: var(--black);
-  color: var(--white);
+  background: var(--navy);
+  color: var(--cream);
   border: none; border-radius: 5px;
   font-size: 13px; font-weight: 700;
   letter-spacing: 1.5px;
@@ -230,7 +232,7 @@ button { cursor: pointer; font-family: inherit; }
   cursor: pointer;
   transition: all .2s;
 }
-.btn-atc:hover { background: #2a2a2a; }
+.btn-atc:hover { background: #3D3648; }
 
 /* ── Buy It Now ── */
 .btn-buy {
@@ -241,7 +243,7 @@ button { cursor: pointer; font-family: inherit; }
   text-decoration: underline;
   cursor: pointer; padding: 4px;
 }
-.btn-buy:hover { color: var(--black); }
+.btn-buy:hover { color: var(--navy); }
 
 /* ── Feature Icons ── */
 .features {
@@ -275,7 +277,7 @@ button { cursor: pointer; font-family: inherit; }
   border-bottom: 1px solid var(--gray-200);
   font-size: 12px; font-weight: 700;
   letter-spacing: 1.5px;
-  color: var(--black);
+  color: var(--navy);
   text-transform: uppercase;
 }
 .acc-h:hover { color: var(--gray-600); }
@@ -300,10 +302,10 @@ button { cursor: pointer; font-family: inherit; }
   max-width: var(--max); margin: 0 auto;
 }
 .related-title {
-  font-family: var(--serif);
   font-size: 24px; font-weight: 600;
   text-align: center;
   margin-bottom: 28px;
+  color: var(--navy);
 }
 .related-grid {
   display: flex; gap: 14px;
@@ -329,11 +331,12 @@ button { cursor: pointer; font-family: inherit; }
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 8px;
-  background: var(--gray-50);
+  background: var(--gray-100);
 }
 .rcard-name {
   display: block;
   font-size: 13px; font-weight: 500;
+  color: var(--navy);
   margin-bottom: 2px;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
@@ -343,15 +346,15 @@ button { cursor: pointer; font-family: inherit; }
 
 /* ── Footer ── */
 .footer {
-  background: var(--gray-50);
+  background: var(--cream);
   border-top: 1px solid var(--gray-200);
   padding: 48px 20px 28px;
   text-align: center;
 }
 .footer-top { margin-bottom: 36px; }
 .footer-top h3 {
-  font-family: var(--serif);
   font-size: 20px; font-weight: 600;
+  color: var(--navy);
   margin-bottom: 6px;
 }
 .footer-top p {
@@ -370,18 +373,19 @@ button { cursor: pointer; font-family: inherit; }
   border-radius: 5px 0 0 5px;
   font-size: 13px; font-family: var(--sans);
   outline: none;
+  background: var(--white);
 }
-.footer-form input:focus { border-color: var(--black); }
+.footer-form input:focus { border-color: var(--navy); }
 .footer-form button {
   padding: 12px 20px;
-  background: var(--black); color: var(--white);
+  background: var(--navy); color: var(--cream);
   border: none; border-radius: 0 5px 5px 0;
   font-size: 11px; font-weight: 700;
   letter-spacing: 1.5px;
   cursor: pointer;
   white-space: nowrap;
 }
-.footer-form button:hover { background: #2a2a2a; }
+.footer-form button:hover { background: #3D3648; }
 
 .footer-links {
   display: grid; grid-template-columns: repeat(2, 1fr);
@@ -395,6 +399,7 @@ button { cursor: pointer; font-family: inherit; }
   font-size: 11px; font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+  color: var(--navy);
   margin-bottom: 12px;
 }
 .fcol a {
@@ -403,7 +408,7 @@ button { cursor: pointer; font-family: inherit; }
   padding: 3px 0;
   transition: color .15s;
 }
-.fcol a:hover { color: var(--black); }
+.fcol a:hover { color: var(--navy); }
 
 .footer-copy {
   font-size: 11.5px; color: var(--gray-400);
@@ -415,7 +420,7 @@ button { cursor: pointer; font-family: inherit; }
 .lightbox {
   display: none;
   position: fixed; inset: 0; z-index: 9999;
-  background: rgba(0,0,0,.94);
+  background: rgba(46,42,57,.95);
   align-items: center; justify-content: center;
 }
 .lightbox.on { display: flex; }
@@ -425,11 +430,11 @@ button { cursor: pointer; font-family: inherit; }
 }
 .lightbox-close {
   position: absolute; top: 14px; right: 18px;
-  color: #fff; font-size: 28px;
+  color: var(--cream); font-size: 28px;
   width: 40px; height: 40px;
   display: flex; align-items: center; justify-content: center;
   border-radius: 50%;
-  background: rgba(255,255,255,.12);
+  background: rgba(253,251,247,.12);
   border: none; cursor: pointer;
 }
 
@@ -437,7 +442,7 @@ button { cursor: pointer; font-family: inherit; }
 .toast {
   position: fixed; top: 60px; left: 50%;
   transform: translateX(-50%) translateY(-120px);
-  background: var(--black); color: var(--white);
+  background: var(--navy); color: var(--cream);
   padding: 12px 24px; border-radius: 25px;
   font-size: 13px; font-weight: 500;
   z-index: 9999;
