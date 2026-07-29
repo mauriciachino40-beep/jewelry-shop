@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maison Kiki — Fine Jewelry</title>
-
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Snipcart -->
@@ -14,115 +13,101 @@
 </head>
 <body>
 
-<!-- ====== Announcement Bar ====== -->
-<div class="announcement">Free Shipping on All US Orders ✨</div>
+<!-- ====== Announcement ====== -->
+<div class="announcement">Free Shipping &amp; Returns  |  10% off your first order with code <b>KIKI10</b></div>
 
 <!-- ====== Navigation ====== -->
 <header class="nav">
   <div class="nav-inner">
     <a href="/" class="nav-logo">MAISON KIKI</a>
-    <button class="snipcart-checkout nav-cart" aria-label="Cart">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
-        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
-      </svg>
-      <span class="snipcart-items-count nav-cart-count"></span>
-    </button>
+    <div class="nav-links">
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <button class="snipcart-checkout nav-cart" aria-label="Cart">
+        <span>Cart</span>
+        <span class="snipcart-items-count nav-cart-num"></span>
+      </button>
+    </div>
   </div>
 </header>
 
-<!-- ====== Product Grid ====== -->
-<main class="product">
-
-  <!-- Gallery -->
-  <div class="product-gallery" id="gallery">
-    <img src="images/product-main.jpg" alt="Jewelry In The Live" class="gallery-img" id="galleryImg">
-    <div class="gallery-dots">
-      <button class="dot active" data-i="0"></button>
-      <button class="dot" data-i="1"></button>
-      <button class="dot" data-i="2"></button>
-    </div>
+<!-- ====== Hero ====== -->
+<section class="hero">
+  <div class="hero-text">
+    <h1 class="hero-logo">Maison Kiki</h1>
+    <p class="hero-sub">A fine jewelry brand based out of Los&nbsp;Angeles, CA</p>
+    <p class="hero-desc">Handcrafted pieces designed for everyday elegance. Each creation blends timeless beauty with modern simplicity — made to be worn, loved, and treasured.</p>
+    <a href="#shop" class="hero-btn">SHOP NOW</a>
   </div>
+  <div class="hero-img">
+    <img src="images/hero.jpg" alt="Maison Kiki">
+  </div>
+</section>
 
-  <!-- Info -->
-  <div class="product-info">
+<!-- ====== Featured Product ====== -->
+<section class="feat-prod" id="shop">
+  <p class="feat-label">FEATURED</p>
+  <div class="feat-grid">
+    <div class="feat-text">
+      <h2 class="feat-title">Jewelry In The Live</h2>
+      <p class="feat-price">$29.40</p>
+      <p class="feat-desc">Jewelry with the perfect touch. This gorgeous necklace features a unique gold plated design accented with a beautiful natural pearl.</p>
 
-    <p class="info-vendor">Maison Kiki</p>
-    <h1 class="info-title">Jewelry In The Live</h1>
-    <p class="info-price">$29.40</p>
-    <p class="info-installment"><span>or 4 interest-free payments of $7.35 with</span></p>
-
-    <!-- Color -->
-    <p class="info-label">Color: <strong id="colorLabel">Gold</strong></p>
-    <div class="swatches" id="swatches">
-      <button class="swatch swatch-gold selected" data-color="Gold" data-img="images/product-main.jpg"></button>
-      <button class="swatch swatch-silver" data-color="Silver" data-img="images/product-silver.jpg"></button>
-    </div>
-
-    <!-- Qty + Buy -->
-    <div class="buy-row">
-      <div class="qty-box">
-        <button class="qty-btn" id="qtyMinus">−</button>
-        <span class="qty-val" id="qtyVal">1</span>
-        <button class="qty-btn" id="qtyPlus">+</button>
+      <!-- Color -->
+      <p class="info-label">Color: <strong id="colorLabel">Gold</strong></p>
+      <div class="swatches" id="swatches">
+        <button class="swatch swatch-gold selected" data-color="Gold" data-img="images/product-main.jpg"></button>
+        <button class="swatch swatch-silver" data-color="Silver" data-img="images/product-silver.jpg"></button>
       </div>
+
+      <!-- Qty + Buy -->
+      <div class="buy-row">
+        <div class="qty-box">
+          <button class="qty-btn" id="qtyMinus">−</button>
+          <span class="qty-val" id="qtyVal">1</span>
+          <button class="qty-btn" id="qtyPlus">+</button>
+        </div>
+      </div>
+
+      <button class="btn-atc snipcart-add-item"
+        id="btnATC"
+        data-item-id="jewelry-gold"
+        data-item-name="Jewelry In The Live"
+        data-item-price="29.40"
+        data-item-url="https://maisonkiki.co/"
+        data-item-image="images/product-main.jpg"
+        data-item-custom1-name="Color"
+        data-item-custom1-value="Gold"
+        data-item-quantity="1">
+        ADD TO CART
+      </button>
+
+      <a href="#" class="btn-buy snipcart-add-item snipcart-checkout"
+        id="btnBuy"
+        data-item-id="jewelry-gold"
+        data-item-name="Jewelry In The Live"
+        data-item-price="29.40"
+        data-item-url="https://maisonkiki.co/"
+        data-item-image="images/product-main.jpg"
+        data-item-custom1-name="Color"
+        data-item-custom1-value="Gold"
+        data-item-quantity="1">
+        BUY IT NOW
+      </a>
     </div>
-
-    <button class="btn-atc snipcart-add-item"
-      id="btnATC"
-      data-item-id="jewelry-gold"
-      data-item-name="Jewelry In The Live"
-      data-item-price="29.40"
-      data-item-url="https://maisonkiki.co/"
-      data-item-image="images/product-main.jpg"
-      data-item-custom1-name="Color"
-      data-item-custom1-value="Gold"
-      data-item-quantity="1">
-      ADD TO CART
-    </button>
-
-    <button class="btn-buy snipcart-add-item snipcart-checkout"
-      id="btnBuy"
-      data-item-id="jewelry-gold"
-      data-item-name="Jewelry In The Live"
-      data-item-price="29.40"
-      data-item-url="https://maisonkiki.co/"
-      data-item-image="images/product-main.jpg"
-      data-item-custom1-name="Color"
-      data-item-custom1-value="Gold"
-      data-item-quantity="1">
-      BUY IT NOW
-    </button>
-
-    <!-- Feature icons -->
-    <div class="features">
-      <div class="feat"><span>✨</span><span>Natural<br>Pearl</span></div>
-      <div class="feat"><span>🎁</span><span>Gift<br>Box</span></div>
-      <div class="feat"><span>📏</span><span>5.9"+2"<br>Extender</span></div>
-      <div class="feat"><span>🔒</span><span>Secure<br>Payment</span></div>
-      <div class="feat"><span>📦</span><span>Free<br>Shipping</span></div>
-      <div class="feat"><span>🔄</span><span>30-Day<br>Return</span></div>
+    <div class="feat-img">
+      <img src="images/product-main.jpg" alt="Jewelry In The Live" id="featImg">
     </div>
-
-    <!-- Accordions -->
-    <div class="acc">
-      <button class="acc-h open">PRODUCT DETAILS <span class="acc-arw">+</span></button>
-      <div class="acc-b open"><p>Jewelry with the perfect touch. This gorgeous necklace features a unique gold plated design accented with a beautiful natural pearl. Perfect for any occasion — from casual outings to elegant evening events.</p></div>
-
-      <button class="acc-h">SHIPPING &amp; RETURNS <span class="acc-arw">+</span></button>
-      <div class="acc-b"><p>Free standard shipping on all US orders (5–8 business days). Returns accepted within 30 days of delivery. Items must be unworn and in original packaging.</p></div>
-
-      <button class="acc-h">MONEY BACK GUARANTEE <span class="acc-arw">+</span></button>
-      <div class="acc-b"><p>We stand behind our craftsmanship. If you're not completely satisfied with your purchase, return it within 30 days for a full refund — no questions asked.</p></div>
-    </div>
-
   </div>
-</main>
+</section>
 
-<!-- ====== Related ====== -->
-<section class="related">
-  <h2 class="related-title">You May Also Like</h2>
-  <div class="related-grid" id="relatedGrid"></div>
+<!-- ====== About ====== -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <h2>Crafted With Care</h2>
+    <p>Every Maison Kiki piece is thoughtfully designed and hand-finished. We use only quality materials — from natural pearls to gold-plated brass — to create jewelry that lasts.</p>
+  </div>
 </section>
 
 <!-- ====== Footer ====== -->
@@ -136,85 +121,31 @@
     </form>
   </div>
   <div class="footer-links">
-    <div class="fcol">
-      <h4>Shop</h4>
-      <a href="#">All Products</a><a href="#">New Arrivals</a><a href="#">Best Sellers</a>
-    </div>
-    <div class="fcol">
-      <h4>About</h4>
-      <a href="#">Our Story</a><a href="#">Contact</a><a href="#">FAQ</a>
-    </div>
-    <div class="fcol">
-      <h4>Support</h4>
-      <a href="#">Shipping</a><a href="#">Returns</a><a href="#">Size Guide</a>
-    </div>
-    <div class="fcol">
-      <h4>Follow</h4>
-      <a href="#">Instagram</a><a href="#">Pinterest</a><a href="#">TikTok</a>
-    </div>
+    <div class="fcol"><h4>Shop</h4><a href="#">All Products</a><a href="#">New Arrivals</a></div>
+    <div class="fcol"><h4>About</h4><a href="#">Our Story</a><a href="#">Contact</a><a href="#">FAQ</a></div>
+    <div class="fcol"><h4>Support</h4><a href="#">Shipping</a><a href="#">Returns</a></div>
+    <div class="fcol"><h4>Follow</h4><a href="#">Instagram</a><a href="#">Pinterest</a><a href="#">TikTok</a></div>
   </div>
   <p class="footer-copy">&copy; 2026 Maison Kiki. Secure checkout by Snipcart &amp; PayPal.</p>
 </footer>
 
-<!-- ====== Lightbox ====== -->
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close">&times;</button>
-  <img src="" alt="" id="lightboxImg">
-</div>
-
-<!-- ====== Toast ====== -->
-<div class="toast" id="toast"></div>
-
 <!-- ====== JS ====== -->
 <script>
-const IMGS = {
-  'Gold':   'images/product-main.jpg',
-  'Silver': 'images/product-silver.jpg'
-};
-const GALLERY = [
-  'images/product-main.jpg',
-  'images/product-1.jpg',
-  'images/product-2.jpg'
-];
+const IMGS = { 'Gold': 'images/product-main.jpg', 'Silver': 'images/product-silver.jpg' };
+let color = 'Gold', qty = 1;
 
-let color = 'Gold';
-let qty = 1;
-let slide = 0;
-
-// ── Gallery ──
-function showSlide(i) {
-  slide = i;
-  const img = document.getElementById('galleryImg');
-  img.src = slide === 0 ? IMGS[color] : GALLERY[slide];
-  document.querySelectorAll('.dot').forEach((d, j) => d.classList.toggle('active', j === i));
-}
-document.querySelector('.gallery-dots').addEventListener('click', e => {
-  const d = e.target.closest('.dot');
-  if (d) showSlide(+d.dataset.i);
-});
-
-// touch swipe
-let tx = 0;
-document.getElementById('gallery').addEventListener('touchstart', e => { tx = e.touches[0].clientX; });
-document.getElementById('gallery').addEventListener('touchend', e => {
-  const dx = tx - e.changedTouches[0].clientX;
-  if (Math.abs(dx) > 50) showSlide((slide + (dx > 0 ? 1 : -1) + GALLERY.length) % GALLERY.length);
-});
-
-// ── Sync Snipcart buttons ──
 function sync() {
-  const img = IMGS[color];
-  const id = 'jewelry-' + color.toLowerCase();
-  ['btnATC','btnBuy'].forEach(sel => {
-    const b = document.getElementById(sel);
+  const img = IMGS[color], id = 'jewelry-' + color.toLowerCase();
+  ['btnATC','btnBuy'].forEach(s => {
+    const b = document.getElementById(s);
     b.setAttribute('data-item-id', id);
     b.setAttribute('data-item-custom1-value', color);
     b.setAttribute('data-item-image', img);
     b.setAttribute('data-item-quantity', qty);
   });
+  document.getElementById('featImg').src = img;
 }
 
-// ── Swatches ──
 document.getElementById('swatches').addEventListener('click', e => {
   const s = e.target.closest('.swatch');
   if (!s) return;
@@ -222,68 +153,12 @@ document.getElementById('swatches').addEventListener('click', e => {
   s.classList.add('selected');
   color = s.dataset.color;
   document.getElementById('colorLabel').textContent = color;
-  if (slide === 0) document.getElementById('galleryImg').src = IMGS[color];
   sync();
 });
 
-// ── Qty ──
 document.getElementById('qtyMinus').addEventListener('click', () => { if (qty > 1) { qty--; updateQty(); } });
 document.getElementById('qtyPlus').addEventListener('click',  () => { if (qty < 99){ qty++; updateQty(); } });
-function updateQty() {
-  document.getElementById('qtyVal').textContent = qty;
-  sync();
-}
-
-// ── Accordion ──
-document.querySelectorAll('.acc-h').forEach(h => {
-  h.addEventListener('click', () => {
-    const body = h.nextElementSibling;
-    const isOpen = body.classList.contains('open');
-    document.querySelectorAll('.acc-h.open').forEach(el => el.classList.remove('open'));
-    document.querySelectorAll('.acc-b.open').forEach(el => el.classList.remove('open'));
-    if (!isOpen) { h.classList.add('open'); body.classList.add('open'); }
-  });
-});
-
-// ── Lightbox ──
-document.getElementById('galleryImg').addEventListener('click', function() {
-  const lb = document.getElementById('lightbox');
-  document.getElementById('lightboxImg').src = this.src;
-  lb.classList.add('on');
-  document.body.style.overflow = 'hidden';
-});
-document.getElementById('lightbox').addEventListener('click', function(e) {
-  if (e.target !== document.getElementById('lightboxImg')) {
-    this.classList.remove('on');
-    document.body.style.overflow = '';
-  }
-});
-document.addEventListener('keydown', e => { if (e.key === 'Escape') { document.getElementById('lightbox').classList.remove('on'); document.body.style.overflow = ''; } });
-
-// ── Toast ──
-function toast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg; t.classList.add('show');
-  clearTimeout(t._tid);
-  t._tid = setTimeout(() => t.classList.remove('show'), 2200);
-}
-
-// ── Related ──
-(function() {
-  const items = [
-    {name:'Pearl Drop Earrings', price:'$24.00'},
-    {name:'Gold Chain Necklace', price:'$32.00'},
-    {name:'Crystal Bracelet Set', price:'$18.50'},
-    {name:'Minimalist Ring', price:'$22.00'}
-  ];
-  document.getElementById('relatedGrid').innerHTML = items.map(p => `
-    <a href="#" class="rcard">
-      <img src="images/product-1.jpg" alt="${p.name}">
-      <span class="rcard-name">${p.name}</span>
-      <span class="rcard-price">${p.price}</span>
-    </a>
-  `).join('');
-})();
+function updateQty() { document.getElementById('qtyVal').textContent = qty; sync(); }
 
 sync();
 </script>
