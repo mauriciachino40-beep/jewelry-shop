@@ -98,24 +98,19 @@ button { cursor: pointer; font-family: inherit; }
 /* ── Hero ── */
 .hero {
   position: relative;
-  width: 100%; height: 100vh;
+  width: 100%;
   overflow: hidden;
-  display: flex; align-items: flex-end;
-}
-@media (max-width: 767px) {
-  .hero { height: 80vh; }
 }
 
 .hero-bg {
-  position: absolute; inset: 0; z-index: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
+  width: 100%;
+  display: block;
+  object-fit: contain;
 }
 
 .hero-overlay {
-  position: relative; z-index: 1;
+  position: absolute; bottom: 0; left: 0; right: 0; z-index: 1;
   padding: 48px;
-  width: 100%;
   background: linear-gradient(to top, rgba(0,0,0,.35) 0%, transparent 60%);
   display: flex; flex-direction: column; align-items: flex-start; gap: 4px;
 }
