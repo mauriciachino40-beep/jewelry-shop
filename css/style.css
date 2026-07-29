@@ -25,11 +25,12 @@ html { scroll-behavior: smooth; }
 body {
   font-family: var(--sans);
   font-weight: 400;
-  background: var(--cream);
+  background: linear-gradient(180deg, #F0F4EC 0%, #F1EBE2 100%);
   color: var(--navy);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-attachment: fixed;
 }
 
 img { max-width: 100%; display: block; }
@@ -50,7 +51,9 @@ button { cursor: pointer; font-family: inherit; }
 /* ── Navigation ── */
 .nav {
   position: sticky; top: 0; z-index: 1000;
-  background: var(--cream);
+  background: rgba(253,251,247,.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--gray-200);
 }
 .nav-inner {
