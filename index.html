@@ -34,14 +34,10 @@
 
 <!-- ====== Hero ====== -->
 <section class="hero">
-  <div class="hero-text">
+  <img src="images/hero.png" alt="" class="hero-bg">
+  <div class="hero-overlay">
     <h1 class="hero-logo">Maison Kiki</h1>
-    <p class="hero-sub">A fine jewelry brand based out of Los&nbsp;Angeles, CA</p>
-    <p class="hero-desc">Handcrafted pieces designed for everyday elegance. Each creation blends timeless beauty with modern simplicity — made to be worn, loved, and treasured.</p>
-    <a href="#shop" class="hero-btn">SHOP NOW</a>
-  </div>
-  <div class="hero-img">
-    <img src="images/hero.png" alt="Maison Kiki">
+    <p class="hero-tagline">Fine Jewelry</p>
   </div>
 </section>
 
@@ -130,6 +126,12 @@
 </footer>
 
 <!-- ====== JS ====== -->
+<script>
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.querySelector('.nav').classList.toggle('scrolled', window.scrollY > 60);
+});
+</script>
 <script>
 const IMGS = { 'Gold': 'images/product-main.jpg', 'Silver': 'images/product-silver.jpg' };
 let color = 'Gold', qty = 1;
