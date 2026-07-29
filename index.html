@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maurici — Fine Jewelry</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Snipcart CSS -->
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.css" />
+
+  <!-- Snipcart JS -->
+  <script async src="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.js"></script>
+
+  <!-- Snipcart 配置 — 隐藏的购物车容器 -->
+  <div hidden id="snipcart" data-api-key="MDY2ODMxMzYtYmI4ZS00ODM5LWFjNDAtM2Q3ZjMyYzEyZWZlNjM5MjA5MTA4NDA5NTEzNDk3" data-config-modal-style="side"></div>
+</head>
+<body>
+
+  <!-- ===== Announcement Bar ===== -->
+  <div class="announcement-bar">Free Shipping on All US Orders ✨</div>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="nav-logo">MAURICI</a>
+      <div class="nav-icons">
+        <button class="snipcart-checkout cart-icon-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <span class="snipcart-items-count cart-count"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Product Main ===== -->
+  <main class="product-main">
+
+    <!-- Gallery (Left) -->
+    <div class="gallery-section" id="gallerySection">
+      <img
+        src="images/product-main.jpg"
+        alt="Product"
+        class="gallery-main"
+        id="mainImage"
+        onclick="openLightbox(this.src)"
+      >
+      <div class="gallery-dots" id="galleryDots">
+        <button class="gallery-dot active" data-index="0"></button>
+        <button class="gallery-dot" data-index="1"></button>
+        <button class="gallery-dot" data-index="2"></button>
+      </div>
+    </div>
+
+    <!-- Product Info (Right) -->
+    <div class="product-info">
+
+      <div class="product-vendor">Maurici</div>
+      <!-- 👇 改成你的产品名 -->
+      <h1 class="product-title">Jewelry In The Live</h1>
+
+      <!-- 👇 改成你的价格 -->
+      <div class="product-price">$29.40</div>
+      <div class="product-installment">
+        Secure checkout with <span>PayPal</span> &amp; credit card
+      </div>
+
+      <!-- Color Variants -->
+      <div class="variant-label">Color: <span id="selectedColorName">Gold</span></div>
+      <div class="variant-swatches" id="variantSwatches">
+        <button class="variant-swatch gold selected"
+          data-color="Gold"
+          data-image="images/product-main.jpg"
+          aria-label="Gold"></button>
+        <button class="variant-swatch silver"
+          data-color="Silver"
+          data-image="images/product-silver.jpg"
+          aria-label="Silver"></button>
+      </div>
+
+      <!-- Quantity + Add to Cart -->
+      <div class="buy-row">
+        <div class="quantity-selector">
+          <button class="qty-btn" onclick="changeQty(-1)" aria-label="Decrease">−</button>
+          <input type="number" class="qty-input" id="qtyInput" value="1" min="1" max="99" readonly>
+          <button class="qty-btn" onclick="changeQty(1)" aria-label="Increase">+</button>
+        </div>
+
+        <!-- Snipcart 购买按钮 -->
+        <button class="btn-add-cart snipcart-add-item"
+          id="btnAddCart"
+          data-item-id="jewelry-live"
+          data-item-name="Jewelry In The Live"
+          data-item-price="29.40"
+          data-item-url="https://mauriciachino40-beep.github.io/jewelry-shop/"
+          data-item-image="images/product-main.jpg"
+          data-item-custom1-name="Color"
+          data-item-custom1-value="Gold"
+          data-item-quantity="1"
+        >
+          ADD TO CART
+        </button>
+      </div>
+
+      <button class="buy-now-link snipcart-add-item snipcart-checkout"
+        id="btnBuyNow"
+        data-item-id="jewelry-live"
+        data-item-name="Jewelry In The Live"
+        data-item-price="29.40"
+        data-item-url="https://mauriciachino40-beep.github.io/jewelry-shop/"
+        data-item-image="images/product-main.jpg"
+        data-item-custom1-name="Color"
+        data-item-custom1-value="Gold"
+        data-item-quantity="1"
+      >
+        BUY IT NOW
+      </button>
+
+      <!-- Feature Icons -->
+      <div class="feature-icons">
+        <div class="feature-icon-item">
+          <span class="icon">✨</span><span class="label">Natural Pearl</span>
+        </div>
+        <div class="feature-icon-item">
+          <span class="icon">🎁</span><span class="label">Gift Box</span>
+        </div>
+        <div class="feature-icon-item">
+          <span class="icon">📏</span><span class="label">5.9 in + 2 in</span>
+        </div>
+        <div class="feature-icon-item">
+          <span class="icon">🔒</span><span class="label">Secure Payment</span>
+        </div>
+        <div class="feature-icon-item">
+          <span class="icon">📦</span><span class="label">Free Shipping</span>
+        </div>
+        <div class="feature-icon-item">
+          <span class="icon">🔄</span><span class="label">30-Day Return</span>
+        </div>
+      </div>
+
+      <!-- Accordions -->
+      <div class="accordion">
+        <button class="accordion-header open" onclick="toggleAccordion(this)">
+          PRODUCT DETAILS <span class="accordion-arrow">+</span>
+        </button>
+        <div class="accordion-body open">
+          <p>
+            Jewelry with the perfect touch. This gorgeous necklace features a unique gold plated design accented with a beautiful natural pearl. Perfect for any occasion — from casual outings to elegant evening events.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          SHIPPING &amp; RETURNS <span class="accordion-arrow">+</span>
+        </button>
+        <div class="accordion-body">
+          <p>Free standard shipping on all US orders (5-8 business days). Returns accepted within 30 days of delivery. Items must be unworn and in original packaging.</p>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          MONEY BACK GUARANTEE <span class="accordion-arrow">+</span>
+        </button>
+        <div class="accordion-body">
+          <p>We stand behind our craftsmanship. If you're not completely satisfied with your purchase, return it within 30 days for a full refund — no questions asked.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== You May Also Like ===== -->
+  <section class="related-section">
+    <h2 class="related-title">You May Also Like</h2>
+    <div class="related-grid" id="relatedGrid"></div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-newsletter">
+        <h3>Stay In The Loop</h3>
+        <p>Sign up for exclusive offers and new arrivals.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing!')">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Shop</h4><a href="#">All Products</a><a href="#">New Arrivals</a><a href="#">Best Sellers</a>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4><a href="#">Our Story</a><a href="#">Contact</a><a href="#">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4><a href="#">Shipping Info</a><a href="#">Returns</a><a href="#">Size Guide</a>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4><a href="#">Instagram</a><a href="#">Pinterest</a><a href="#">TikTok</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Maurici — Fine Jewelry. Secure checkout by Snipcart &amp; PayPal.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Lightbox ===== -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img src="" alt="Enlarged" id="lightboxImg">
+  </div>
+
+  <!-- ===== Toast ===== -->
+  <div class="toast" id="toast"></div>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    /* ── Product images per variant ── */
+    const variantImages = {
+      'Gold':  'images/product-main.jpg',
+      'Silver':'images/product-silver.jpg'
+    };
+    let selectedColor = 'Gold';
+    let quantity = 1;
+
+    /* ── Gallery dot navigation ── */
+    const galleryImages = [
+      'images/product-main.jpg',
+      'images/product-1.jpg',
+      'images/product-2.jpg'
+    ];
+    let currentSlide = 0;
+
+    function syncGallery() {
+      const img = document.getElementById('mainImage');
+      if (currentSlide === 0) {
+        img.src = variantImages[selectedColor] || galleryImages[0];
+      } else {
+        img.src = galleryImages[currentSlide];
+      }
+      document.querySelectorAll('.gallery-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === currentSlide);
+      });
+    }
+
+    function goToSlide(i) { currentSlide = i; syncGallery(); }
+
+    document.getElementById('galleryDots').addEventListener('click', (e) => {
+      if (e.target.classList.contains('gallery-dot')) {
+        goToSlide(parseInt(e.target.dataset.index));
+      }
+    });
+
+    // Touch swipe
+    let touchX = 0;
+    document.getElementById('gallerySection').addEventListener('touchstart', e => { touchX = e.touches[0].clientX; });
+    document.getElementById('gallerySection').addEventListener('touchend', e => {
+      const d = touchX - e.changedTouches[0].clientX;
+      if (Math.abs(d) > 50) goToSlide((currentSlide + (d > 0 ? 1 : -1) + galleryImages.length) % galleryImages.length);
+    });
+
+    /* ── Update Snipcart button attributes ── */
+    function syncBuyButtons() {
+      const color = selectedColor;
+      const img = variantImages[color] || 'images/product-main.jpg';
+      const id = 'jewelry-' + color.toLowerCase();
+
+      document.querySelectorAll('.snipcart-add-item').forEach(btn => {
+        btn.setAttribute('data-item-id', id);
+        btn.setAttribute('data-item-custom1-value', color);
+        btn.setAttribute('data-item-image', img);
+        btn.setAttribute('data-item-quantity', quantity);
+      });
+    }
+
+    /* ── Variant swatches ── */
+    document.getElementById('variantSwatches').addEventListener('click', (e) => {
+      const swatch = e.target.closest('.variant-swatch');
+      if (!swatch) return;
+      document.querySelectorAll('.variant-swatch').forEach(s => s.classList.remove('selected'));
+      swatch.classList.add('selected');
+      selectedColor = swatch.dataset.color;
+      document.getElementById('selectedColorName').textContent = selectedColor;
+      syncGallery();
+      syncBuyButtons();
+    });
+
+    /* ── Quantity ── */
+    function changeQty(delta) {
+      quantity = Math.max(1, Math.min(99, quantity + delta));
+      document.getElementById('qtyInput').value = quantity;
+      syncBuyButtons();
+    }
+
+    /* ── Accordions ── */
+    function toggleAccordion(header) {
+      const body = header.nextElementSibling;
+      const isOpen = body.classList.contains('open');
+      document.querySelectorAll('.accordion-body.open').forEach(b => b.classList.remove('open'));
+      document.querySelectorAll('.accordion-header.open').forEach(h => h.classList.remove('open'));
+      if (!isOpen) { body.classList.add('open'); header.classList.add('open'); }
+    }
+
+    /* ── Lightbox ── */
+    function openLightbox(src) {
+      if (!src) return;
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    /* ── Toast ── */
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      clearTimeout(t._t);
+      t._t = setTimeout(() => t.classList.remove('show'), 2200);
+    }
+
+    /* ── Related products (placeholder) ── */
+    (function() {
+      const items = [
+        { name: 'Pearl Drop Earrings', price: '$24.00' },
+        { name: 'Gold Chain Necklace', price: '$32.00' },
+        { name: 'Crystal Bracelet Set', price: '$18.50' },
+        { name: 'Minimalist Ring', price: '$22.00' },
+      ];
+      document.getElementById('relatedGrid').innerHTML = items.map(p => `
+        <a href="#" class="related-card">
+          <img src="images/product-1.jpg" alt="${p.name}" onerror="this.style.background='#f3f3f3'">
+          <div class="name">${p.name}</div>
+          <div class="price">${p.price}</div>
+        </a>
+      `).join('');
+    })();
+
+    // Init
+    syncBuyButtons();
+    console.log('✨ Maurici Jewelry — Snipcart ready!');
+  </script>
+</body>
+</html>
