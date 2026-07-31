@@ -202,6 +202,15 @@ button { cursor: pointer; font-family: inherit; }
   .prod-info { padding: 0 20px; }
 }
 
+.prod-kicker {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 8px;
+}
+
 .prod-title {
   font-size: 22px;
   font-weight: 600;
@@ -214,7 +223,7 @@ button { cursor: pointer; font-family: inherit; }
   font-size: 18px;
   font-weight: 500;
   color: var(--navy);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 /* Description */
@@ -222,7 +231,7 @@ button { cursor: pointer; font-family: inherit; }
   font-size: 13.5px;
   color: var(--gray-600);
   line-height: 1.7;
-  margin-bottom: 20px;
+  margin-top: 22px;
 }
 
 /* Color Swatches */
@@ -236,7 +245,7 @@ button { cursor: pointer; font-family: inherit; }
 
 .swatches {
   display: flex; gap: 12px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .swatch {
@@ -254,6 +263,28 @@ button { cursor: pointer; font-family: inherit; }
 }
 .swatch-gold   { background: linear-gradient(135deg, #E8D098, #E4C891, #D4B878); }
 .swatch-silver { background: linear-gradient(135deg, #D8D8D8, #C4C4C4, #AEAEAE); }
+
+/* Option Pills */
+.option-pills {
+  display: flex; gap: 8px; flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.option-pill {
+  padding: 8px 18px;
+  font-size: 13px; font-weight: 500;
+  color: var(--navy);
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all .15s;
+}
+.option-pill:hover { border-color: var(--navy); }
+.option-pill.selected {
+  border-color: var(--navy);
+  background: var(--navy);
+  color: var(--cream);
+}
 
 /* Quantity */
 .qty-box {

@@ -59,16 +59,23 @@
 
     <!-- ── Right: Info ── -->
     <div class="prod-info">
+      <p class="prod-kicker">Everyday Essential</p>
       <h2 class="prod-title">Pearl Kiss</h2>
       <p class="prod-price">$29.40</p>
 
-      <p class="prod-desc">A delicate gold-plated necklace featuring a lustrous natural freshwater pearl. The perfect everyday piece — subtle enough for layering, elegant enough to wear alone.</p>
-
       <!-- Color -->
-      <p class="info-label">Color: <strong id="colorLabel">Gold</strong></p>
+      <p class="info-label">Color — <strong id="colorLabel">Gold</strong></p>
       <div class="swatches" id="swatches">
         <button class="swatch swatch-gold selected" data-color="Gold" data-img="images/product-main.jpg" data-slide="slideGold"></button>
         <button class="swatch swatch-silver" data-color="Silver" data-img="images/product-silver.jpg" data-slide="slideSilver"></button>
+      </div>
+
+      <!-- Chain Length -->
+      <p class="info-label">Chain Length — <strong id="lengthLabel">16" + 2" extender</strong></p>
+      <div class="option-pills" id="lengthOptions">
+        <button class="option-pill selected" data-length='16" + 2" extender'>16" + 2"</button>
+        <button class="option-pill" data-length='18" + 2" extender'>18" + 2"</button>
+        <button class="option-pill" data-length='20" + 2" extender'>20" + 2"</button>
       </div>
 
       <!-- Qty -->
@@ -88,6 +95,8 @@
         data-item-image="images/product-main.jpg"
         data-item-custom1-name="Color"
         data-item-custom1-value="Gold"
+        data-item-custom2-name="Chain Length"
+        data-item-custom2-value='16" + 2" extender'
         data-item-quantity="1">
         ADD TO CART
       </button>
@@ -101,9 +110,14 @@
         data-item-image="images/product-main.jpg"
         data-item-custom1-name="Color"
         data-item-custom1-value="Gold"
+        data-item-custom2-name="Chain Length"
+        data-item-custom2-value='16" + 2" extender'
         data-item-quantity="1">
         BUY IT NOW
       </a>
+
+      <!-- Product Intro -->
+      <p class="prod-desc">A delicate gold-plated necklace featuring a lustrous natural freshwater pearl. The perfect everyday piece — subtle enough for layering, elegant enough to wear alone. Each pearl is hand-selected for its unique iridescence, making every necklace one of a kind.</p>
 
       <!-- ── Accordion ── -->
       <div class="prod-accordion">
@@ -185,7 +199,7 @@
 <!-- ====== JS ====== -->
 <script>
 const IMGS = { 'Gold': 'images/product-main.jpg', 'Silver': 'images/product-silver.jpg' };
-let color = 'Gold', qty = 1;
+let color = 'Gold', qty = 1, chainLen = '16" + 2" extender';
 
 function sync() {
   const img = IMGS[color], id = 'jewelry-' + color.toLowerCase();
@@ -193,6 +207,7 @@ function sync() {
     const b = document.getElementById(s);
     b.setAttribute('data-item-id', id);
     b.setAttribute('data-item-custom1-value', color);
+    b.setAttribute('data-item-custom2-value', chainLen);
     b.setAttribute('data-item-image', img);
     b.setAttribute('data-item-quantity', qty);
   });
@@ -213,6 +228,17 @@ document.getElementById('swatches').addEventListener('click', e => {
   s.classList.add('selected');
   color = s.dataset.color;
   document.getElementById('colorLabel').textContent = color;
+  sync();
+});
+
+// Chain length pills
+document.getElementById('lengthOptions').addEventListener('click', e => {
+  const p = e.target.closest('.option-pill');
+  if (!p) return;
+  document.querySelectorAll('#lengthOptions .option-pill').forEach(el => el.classList.remove('selected'));
+  p.classList.add('selected');
+  chainLen = p.dataset.length;
+  document.getElementById('lengthLabel').textContent = chainLen;
   sync();
 });
 
