@@ -505,11 +505,9 @@ button { cursor: pointer; font-family: inherit; }
 }
 .review-img {
   flex: 0 0 auto;
-  width: 280px;
+  height: 360px;
+  width: auto;
   max-width: 80vw;
-  height: auto;
-  aspect-ratio: auto;
-  object-fit: contain;
   border-radius: 8px;
   scroll-snap-align: start;
   box-shadow: 0 2px 8px rgba(0,0,0,.06);
