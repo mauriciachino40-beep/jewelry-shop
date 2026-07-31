@@ -43,115 +43,116 @@
 
 <!-- ====== Product Detail ====== -->
 <section class="prod-detail" id="shop">
+  <div class="prod-layout">
 
-  <!-- ── Image Gallery ── -->
-  <div class="prod-gallery">
-    <div class="prod-slides">
-      <img src="images/product-main.jpg" alt="Pearl Kiss — Gold" class="prod-slide active" id="slideGold">
-      <img src="images/product-silver.jpg" alt="Pearl Kiss — Silver" class="prod-slide" id="slideSilver">
+    <!-- ── Left: Image Gallery ── -->
+    <div class="prod-gallery">
+      <div class="prod-slides">
+        <img src="images/product-main.jpg" alt="Pearl Kiss — Gold" class="prod-slide active" id="slideGold">
+        <img src="images/product-silver.jpg" alt="Pearl Kiss — Silver" class="prod-slide" id="slideSilver">
+      </div>
+      <div class="prod-dots">
+        <button class="prod-dot active" data-slide="slideGold"></button>
+        <button class="prod-dot" data-slide="slideSilver"></button>
+      </div>
     </div>
-    <div class="prod-dots">
-      <button class="prod-dot active" data-slide="slideGold"></button>
-      <button class="prod-dot" data-slide="slideSilver"></button>
+
+    <!-- ── Right: Info ── -->
+    <div class="prod-info">
+      <h2 class="prod-title">Pearl Kiss</h2>
+      <p class="prod-price">$29.40</p>
+
+      <p class="prod-desc">A delicate gold-plated necklace featuring a lustrous natural freshwater pearl. The perfect everyday piece — subtle enough for layering, elegant enough to wear alone.</p>
+
+      <!-- Color -->
+      <p class="info-label">Color: <strong id="colorLabel">Gold</strong></p>
+      <div class="swatches" id="swatches">
+        <button class="swatch swatch-gold selected" data-color="Gold" data-img="images/product-main.jpg" data-slide="slideGold"></button>
+        <button class="swatch swatch-silver" data-color="Silver" data-img="images/product-silver.jpg" data-slide="slideSilver"></button>
+      </div>
+
+      <!-- Qty -->
+      <div class="qty-box">
+        <button class="qty-btn" id="qtyMinus">−</button>
+        <span class="qty-val" id="qtyVal">1</span>
+        <button class="qty-btn" id="qtyPlus">+</button>
+      </div>
+
+      <!-- Buttons -->
+      <button class="btn-atc snipcart-add-item"
+        id="btnATC"
+        data-item-id="jewelry-gold"
+        data-item-name="Pearl Kiss"
+        data-item-price="29.40"
+        data-item-url="https://maisonkiki.co/"
+        data-item-image="images/product-main.jpg"
+        data-item-custom1-name="Color"
+        data-item-custom1-value="Gold"
+        data-item-quantity="1">
+        ADD TO CART
+      </button>
+
+      <a href="#" class="btn-buy snipcart-add-item snipcart-checkout"
+        id="btnBuy"
+        data-item-id="jewelry-gold"
+        data-item-name="Pearl Kiss"
+        data-item-price="29.40"
+        data-item-url="https://maisonkiki.co/"
+        data-item-image="images/product-main.jpg"
+        data-item-custom1-name="Color"
+        data-item-custom1-value="Gold"
+        data-item-quantity="1">
+        BUY IT NOW
+      </a>
+
+      <!-- ── Accordion ── -->
+      <div class="prod-accordion">
+        <details class="prod-detail-item" open>
+          <summary>Description</summary>
+          <div class="prod-detail-body">
+            <ul>
+              <li>Chain length: 16" + 2" extender</li>
+              <li>Pearl size: 6–7 mm freshwater pearl</li>
+              <li>Spring-ring clasp</li>
+              <li>Available in Gold and Silver finishes</li>
+            </ul>
+          </div>
+        </details>
+        <details class="prod-detail-item">
+          <summary>Materials</summary>
+          <div class="prod-detail-body">
+            <ul>
+              <li><strong>Gold:</strong> 18K gold-plated brass, nickel-free &amp; hypoallergenic</li>
+              <li><strong>Silver:</strong> Rhodium-plated brass, nickel-free &amp; hypoallergenic</li>
+              <li><strong>Pearl:</strong> Genuine freshwater pearl — each one naturally unique</li>
+            </ul>
+          </div>
+        </details>
+        <details class="prod-detail-item">
+          <summary>Shipping</summary>
+          <div class="prod-detail-body">
+            <p>Free standard shipping on all orders. Processing takes 1–2 business days.</p>
+            <ul>
+              <li>🇺🇸 United States: 5–10 business days</li>
+              <li>🌏 International: 10–20 business days</li>
+            </ul>
+          </div>
+        </details>
+        <details class="prod-detail-item">
+          <summary>Care Instructions</summary>
+          <div class="prod-detail-body">
+            <ul>
+              <li>Avoid contact with water, perfume, and lotions</li>
+              <li>Remove before showering, swimming, or exercising</li>
+              <li>Store in the included Maison Kiki pouch</li>
+              <li>Gently polish with the included soft cloth</li>
+            </ul>
+          </div>
+        </details>
+      </div>
     </div>
+
   </div>
-
-  <!-- ── Product Info ── -->
-  <div class="prod-info">
-    <h2 class="prod-title">Pearl Kiss</h2>
-    <p class="prod-price">$29.40</p>
-
-    <!-- Color -->
-    <p class="info-label">Color: <strong id="colorLabel">Gold</strong></p>
-    <div class="swatches" id="swatches">
-      <button class="swatch swatch-gold selected" data-color="Gold" data-img="images/product-main.jpg" data-slide="slideGold"></button>
-      <button class="swatch swatch-silver" data-color="Silver" data-img="images/product-silver.jpg" data-slide="slideSilver"></button>
-    </div>
-
-    <!-- Qty -->
-    <div class="qty-box">
-      <button class="qty-btn" id="qtyMinus">−</button>
-      <span class="qty-val" id="qtyVal">1</span>
-      <button class="qty-btn" id="qtyPlus">+</button>
-    </div>
-
-    <!-- Buttons -->
-    <button class="btn-atc snipcart-add-item"
-      id="btnATC"
-      data-item-id="jewelry-gold"
-      data-item-name="Pearl Kiss"
-      data-item-price="29.40"
-      data-item-url="https://maisonkiki.co/"
-      data-item-image="images/product-main.jpg"
-      data-item-custom1-name="Color"
-      data-item-custom1-value="Gold"
-      data-item-quantity="1">
-      ADD TO CART
-    </button>
-
-    <a href="#" class="btn-buy snipcart-add-item snipcart-checkout"
-      id="btnBuy"
-      data-item-id="jewelry-gold"
-      data-item-name="Pearl Kiss"
-      data-item-price="29.40"
-      data-item-url="https://maisonkiki.co/"
-      data-item-image="images/product-main.jpg"
-      data-item-custom1-name="Color"
-      data-item-custom1-value="Gold"
-      data-item-quantity="1">
-      BUY IT NOW
-    </a>
-
-    <!-- Description -->
-    <p class="prod-desc">A delicate gold-plated necklace featuring a lustrous natural freshwater pearl. The perfect everyday piece — subtle enough for layering, elegant enough to wear alone.</p>
-
-    <!-- ── Accordion ── -->
-    <div class="prod-accordion">
-      <details class="prod-detail-item" open>
-        <summary>Description</summary>
-        <div class="prod-detail-body">
-          <ul>
-            <li>Chain length: 16" + 2" extender</li>
-            <li>Pearl size: 6–7 mm freshwater pearl</li>
-            <li>Spring-ring clasp</li>
-            <li>Available in Gold and Silver finishes</li>
-          </ul>
-        </div>
-      </details>
-      <details class="prod-detail-item">
-        <summary>Materials</summary>
-        <div class="prod-detail-body">
-          <ul>
-            <li><strong>Gold:</strong> 18K gold-plated brass, nickel-free &amp; hypoallergenic</li>
-            <li><strong>Silver:</strong> Rhodium-plated brass, nickel-free &amp; hypoallergenic</li>
-            <li><strong>Pearl:</strong> Genuine freshwater pearl — each one naturally unique</li>
-          </ul>
-        </div>
-      </details>
-      <details class="prod-detail-item">
-        <summary>Shipping</summary>
-        <div class="prod-detail-body">
-          <p>Free standard shipping on all orders. Processing takes 1–2 business days.</p>
-          <ul>
-            <li>🇺🇸 United States: 5–10 business days</li>
-            <li>🌏 International: 10–20 business days</li>
-          </ul>
-        </div>
-      </details>
-      <details class="prod-detail-item">
-        <summary>Care Instructions</summary>
-        <div class="prod-detail-body">
-          <ul>
-            <li>Avoid contact with water, perfume, and lotions</li>
-            <li>Remove before showering, swimming, or exercising</li>
-            <li>Store in the included Maison Kiki pouch</li>
-            <li>Gently polish with the included soft cloth</li>
-          </ul>
-        </div>
-      </details>
-    </div>
-  </div>
-
 </section>
 
 <!-- ====== About ====== -->
