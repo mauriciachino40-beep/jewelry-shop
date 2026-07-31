@@ -128,6 +128,9 @@
       <!-- Existing description (kept) -->
       <p class="prod-desc">A delicate gold-plated necklace featuring a lustrous natural freshwater pearl. The perfect everyday piece — subtle enough for layering, elegant enough to wear alone. Each pearl is hand-selected for its unique iridescence, making every necklace one of a kind.</p>
 
+      <!-- Selling Points (dynamic) -->
+      <div class="sell-points" id="sellPoints"></div>
+
       <!-- ── Accordion ── -->
       <div class="prod-accordion">
         <details class="prod-detail-item" open>
@@ -211,6 +214,40 @@ let selectedName = 'Jewelry — 1pcs';
 let selectedPrice = '40.00';
 let selectedImg  = 'images/jewelry-bulk.jpg';
 
+// Selling points data
+const SELL = {
+  clover: {
+    title: '✨ Why You\'ll Love This Clover Piece',
+    points: [
+      'Authentic gold tone — soft, true gold; never that brassy yellow',
+      'Precision clover silhouette — balanced, classic proportions',
+      'CBC clasp — secure, smooth to fasten, built to last',
+      'Crisp hallmark stamp — every detail faithfully rendered',
+      'Plump, rounded beads — evenly sized, perfectly smooth to the touch',
+      'Thick gold plating — take good care and they stay brilliant for years',
+      'Natural stones — genuine freshwater pearls with real lustre, onyx, carnelian & more'
+    ]
+  },
+  bangle: {
+    title: '✨ Why You\'ll Love This Nail Bangle',
+    points: [
+      'Soft light-gold hue — understated, elegant',
+      'Twist-to-open mechanism — needs serious craftsmanship to get this right',
+      'Extra-thick gold plating — made for daily wear',
+      'Timeless & low-key — simple enough for every day, elegant enough for any occasion'
+    ]
+  },
+  bracelet: {
+    title: '✨ Why You\'ll Love This Bracelet',
+    points: [
+      'Authentic gold tone — soft, true gold; never that brassy yellow',
+      'Thick gold plating — take good care and they stay brilliant for years',
+      'Crisp hallmark stamp — every detail faithfully rendered',
+      'Timeless design — classic enough to wear daily, elegant enough for special occasions'
+    ]
+  }
+};
+
 function sync() {
   const id = selectedName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '');
   ['btnATC','btnBuy'].forEach(s => {
@@ -223,6 +260,7 @@ function sync() {
   });
   document.getElementById('prodPrice').textContent = '$' + parseFloat(selectedPrice).toFixed(2);
   updateDiscount(selectedName, parseFloat(selectedPrice));
+  updateSellPoints(selectedName);
 }
 
 // Show savings for bulk jewelry
@@ -246,6 +284,24 @@ function updateDiscount(name, price) {
   } else {
     el.innerHTML = '<span class="each">$' + price.toFixed(2) + '</span>';
   }
+}
+
+// Switch selling points based on selection
+function updateSellPoints(name) {
+  const el = document.getElementById('sellPoints');
+  let data;
+  if (name.toLowerCase().includes('bangle')) {
+    data = SELL.bangle;
+  } else if (name.toLowerCase().includes('love bracelet')) {
+    data = SELL.bracelet;
+  } else {
+    data = SELL.clover;
+  }
+  el.innerHTML =
+    '<p class="sell-points-title">' + data.title + '</p>' +
+    '<ul class="sell-points-list">' +
+    data.points.map(p => '<li>' + p + '</li>').join('') +
+    '</ul>';
 }
 
 // Option pill selection — one active across all groups + switch image

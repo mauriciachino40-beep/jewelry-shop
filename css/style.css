@@ -371,6 +371,42 @@ button { cursor: pointer; font-family: inherit; }
 }
 .btn-buy:hover { color: var(--navy); }
 
+/* Selling Points */
+.sell-points {
+  margin-top: 22px;
+  padding: 20px 22px;
+  background: var(--gray-100);
+  border-radius: 6px;
+}
+.sell-points-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+  letter-spacing: .3px;
+}
+.sell-points-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sell-points-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 7px;
+  font-size: 13px;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+.sell-points-list li:last-child { margin-bottom: 0; }
+.sell-points-list li::before {
+  content: '✓';
+  position: absolute; left: 0; top: 0;
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 12px;
+}
+
 /* Accordion */
 .prod-accordion {
   margin-top: 24px;
