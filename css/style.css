@@ -485,18 +485,12 @@ button { cursor: pointer; font-family: inherit; }
 
 /* Testimonial quotes */
 .reviews-quotes {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 620px;
   margin: 0 auto 28px;
-}
-@media (max-width: 767px) {
-  .reviews-quotes {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-    padding: 0 16px;
-  }
+  padding: 0 16px;
 }
 .quote-card {
   padding: 16px 20px;
