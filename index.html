@@ -48,7 +48,7 @@
     <!-- ── Left: Image Gallery ── -->
     <div class="prod-gallery">
       <div class="prod-slides">
-        <img src="images/1111111.webp" alt="Jewelry" class="prod-slide active" id="slideGold">
+        <img src="images/1111111.webp?v=2" alt="Jewelry" class="prod-slide active" id="slideGold">
       </div>
     </div>
 
@@ -329,9 +329,9 @@ document.getElementById('prodOptions').addEventListener('click', e => {
   selectedName  = p.dataset.name;
   selectedPrice = p.dataset.price;
   selectedImg   = p.dataset.img;
-  // Switch the active slide image
+  // Switch the active slide image (bust cache)
   const activeSlide = document.querySelector('.prod-slide.active');
-  if (activeSlide) activeSlide.src = selectedImg;
+  if (activeSlide) activeSlide.src = selectedImg + '?v=2';
   sync();
 });
 
