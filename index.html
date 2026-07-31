@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maison Kiki — Timeless Jewelry</title>
-  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="stylesheet" href="css/style.css?v=4">
 
   <!-- Snipcart -->
   <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.css" />
@@ -34,10 +34,19 @@
 
 <!-- ====== Hero ====== -->
 <section class="hero">
-  <img src="images/hero.png" alt="" class="hero-bg">
+  <div class="hero-slides">
+    <img src="images/hero-1.png" alt="" class="hero-bg active">
+    <img src="images/hero-2.png" alt="" class="hero-bg">
+    <img src="images/hero-3.png" alt="" class="hero-bg">
+  </div>
   <div class="hero-overlay">
     <h1 class="hero-logo">Maison Kiki</h1>
     <p class="hero-tagline">Timeless Jewelry</p>
+  </div>
+  <div class="hero-dots">
+    <button class="hero-dot active" data-index="0"></button>
+    <button class="hero-dot" data-index="1"></button>
+    <button class="hero-dot" data-index="2"></button>
   </div>
 </section>
 
@@ -363,6 +372,32 @@ document.querySelector('.prod-dots').addEventListener('click', e => {
 });
 
 sync();
+
+// Hero slideshow auto-rotation
+(function() {
+  const slides = document.querySelectorAll('.hero-bg');
+  const dots = document.querySelectorAll('.hero-dot');
+  let current = 0;
+  const total = slides.length;
+
+  function show(index) {
+    slides.forEach(s => s.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+    current = index;
+  }
+
+  // Auto rotate every 4 seconds
+  setInterval(() => { show((current + 1) % total); }, 4000);
+
+  // Click dots to switch
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      show(parseInt(dot.dataset.index));
+    });
+  });
+})();
 </script>
 </body>
 </html>
