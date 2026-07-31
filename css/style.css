@@ -241,24 +241,18 @@ button { cursor: pointer; font-family: inherit; }
 
 /* Description */
 .prod-desc {
-  font-size: 14.5px;
+  font-size: 16px;
   color: var(--gray-600);
   line-height: 1.7;
   margin-top: 22px;
 }
 
 .prod-desc-accept {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--navy);
-  margin-top: 4px;
+  margin-top: 6px;
   letter-spacing: .3px;
-}
-
-.prod-desc-ship {
-  font-size: 14px;
-  color: var(--gray-600);
-  margin-top: 2px;
 }
 
 /* Color Swatches */
