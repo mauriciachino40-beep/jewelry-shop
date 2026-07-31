@@ -43,120 +43,115 @@
 
 <!-- ====== Product Detail ====== -->
 <section class="prod-detail" id="shop">
-  <div class="prod-layout">
 
-    <!-- ── Left: Gallery ── -->
-    <div class="prod-gallery">
-      <img src="images/product-main.jpg" alt="Pearl Necklace" id="featImg" class="prod-main-img">
-      <div class="prod-thumbs">
-        <button class="prod-thumb active" data-img="images/product-main.jpg">
-          <img src="images/product-main.jpg" alt="">
-        </button>
-        <button class="prod-thumb" data-img="images/product-silver.jpg">
-          <img src="images/product-silver.jpg" alt="">
-        </button>
-      </div>
+  <!-- ── Image Gallery ── -->
+  <div class="prod-gallery">
+    <div class="prod-slides">
+      <img src="images/product-main.jpg" alt="Pearl Kiss — Gold" class="prod-slide active" id="slideGold">
+      <img src="images/product-silver.jpg" alt="Pearl Kiss — Silver" class="prod-slide" id="slideSilver">
     </div>
-
-    <!-- ── Right: Info ── -->
-    <div class="prod-info">
-      <h2 class="prod-title">Pearl Kiss</h2>
-      <p class="prod-price">$29.40 <span class="prod-currency">USD</span></p>
-
-      <p class="prod-desc">A delicate gold-plated necklace featuring a lustrous natural freshwater pearl. The perfect everyday piece — subtle enough for layering, elegant enough to wear alone. Each pearl is hand-selected for its unique iridescence, making every necklace one of a kind.</p>
-
-      <!-- Color -->
-      <p class="info-label">Color: <strong id="colorLabel">Gold</strong></p>
-      <div class="swatches" id="swatches">
-        <button class="swatch swatch-gold selected" data-color="Gold" data-img="images/product-main.jpg"></button>
-        <button class="swatch swatch-silver" data-color="Silver" data-img="images/product-silver.jpg"></button>
-      </div>
-
-      <!-- Qty -->
-      <div class="buy-row">
-        <div class="qty-box">
-          <button class="qty-btn" id="qtyMinus">−</button>
-          <span class="qty-val" id="qtyVal">1</span>
-          <button class="qty-btn" id="qtyPlus">+</button>
-        </div>
-      </div>
-
-      <!-- Buttons -->
-      <button class="btn-atc snipcart-add-item"
-        id="btnATC"
-        data-item-id="jewelry-gold"
-        data-item-name="Pearl Kiss"
-        data-item-price="29.40"
-        data-item-url="https://maisonkiki.co/"
-        data-item-image="images/product-main.jpg"
-        data-item-custom1-name="Color"
-        data-item-custom1-value="Gold"
-        data-item-quantity="1">
-        ADD TO CART
-      </button>
-
-      <a href="#" class="btn-buy snipcart-add-item snipcart-checkout"
-        id="btnBuy"
-        data-item-id="jewelry-gold"
-        data-item-name="Pearl Kiss"
-        data-item-price="29.40"
-        data-item-url="https://maisonkiki.co/"
-        data-item-image="images/product-main.jpg"
-        data-item-custom1-name="Color"
-        data-item-custom1-value="Gold"
-        data-item-quantity="1">
-        BUY IT NOW
-      </a>
-
-      <!-- ── Accordion ── -->
-      <div class="prod-accordion">
-        <details class="prod-detail-item" open>
-          <summary><span>Description</span><span class="accordion-icon"></span></summary>
-          <div class="prod-detail-body">
-            <p>Meet Pearl Kiss — our signature necklace designed to be worn every day. A single freshwater pearl hangs from a delicate cable chain, catching the light with every movement. The pearl measures approximately 6–7 mm and sits at the perfect collarbone length.</p>
-            <ul>
-              <li>Chain length: 16" + 2" extender</li>
-              <li>Pearl size: 6–7 mm freshwater pearl</li>
-              <li>Spring-ring clasp</li>
-              <li>Available in Gold and Silver finishes</li>
-            </ul>
-          </div>
-        </details>
-        <details class="prod-detail-item">
-          <summary><span>Materials</span><span class="accordion-icon"></span></summary>
-          <div class="prod-detail-body">
-            <ul>
-              <li><strong>Gold:</strong> 18K gold-plated brass, nickel-free &amp; hypoallergenic</li>
-              <li><strong>Silver:</strong> Rhodium-plated brass, nickel-free &amp; hypoallergenic</li>
-              <li><strong>Pearl:</strong> Genuine freshwater pearl — each one naturally unique in shape &amp; luster</li>
-            </ul>
-          </div>
-        </details>
-        <details class="prod-detail-item">
-          <summary><span>Shipping</span><span class="accordion-icon"></span></summary>
-          <div class="prod-detail-body">
-            <p>Free standard shipping on all orders. Processing takes 1–2 business days. Delivery estimates:</p>
-            <ul>
-              <li>🇺🇸 United States: 5–10 business days</li>
-              <li>🌏 International: 10–20 business days</li>
-            </ul>
-            <p>You'll receive a tracking number via email once your order ships.</p>
-          </div>
-        </details>
-        <details class="prod-detail-item">
-          <summary><span>Care Instructions</span><span class="accordion-icon"></span></summary>
-          <div class="prod-detail-body">
-            <ul>
-              <li>Avoid contact with water, perfume, and lotions</li>
-              <li>Remove before showering, swimming, or exercising</li>
-              <li>Store in the included Maison Kiki pouch away from direct sunlight</li>
-              <li>Gently polish with the included soft cloth to restore shine</li>
-            </ul>
-          </div>
-        </details>
-      </div>
+    <div class="prod-dots">
+      <button class="prod-dot active" data-slide="slideGold"></button>
+      <button class="prod-dot" data-slide="slideSilver"></button>
     </div>
   </div>
+
+  <!-- ── Product Info ── -->
+  <div class="prod-info">
+    <h2 class="prod-title">Pearl Kiss</h2>
+    <p class="prod-price">$29.40</p>
+
+    <!-- Color -->
+    <p class="info-label">Color: <strong id="colorLabel">Gold</strong></p>
+    <div class="swatches" id="swatches">
+      <button class="swatch swatch-gold selected" data-color="Gold" data-img="images/product-main.jpg" data-slide="slideGold"></button>
+      <button class="swatch swatch-silver" data-color="Silver" data-img="images/product-silver.jpg" data-slide="slideSilver"></button>
+    </div>
+
+    <!-- Qty -->
+    <div class="qty-box">
+      <button class="qty-btn" id="qtyMinus">−</button>
+      <span class="qty-val" id="qtyVal">1</span>
+      <button class="qty-btn" id="qtyPlus">+</button>
+    </div>
+
+    <!-- Buttons -->
+    <button class="btn-atc snipcart-add-item"
+      id="btnATC"
+      data-item-id="jewelry-gold"
+      data-item-name="Pearl Kiss"
+      data-item-price="29.40"
+      data-item-url="https://maisonkiki.co/"
+      data-item-image="images/product-main.jpg"
+      data-item-custom1-name="Color"
+      data-item-custom1-value="Gold"
+      data-item-quantity="1">
+      ADD TO CART
+    </button>
+
+    <a href="#" class="btn-buy snipcart-add-item snipcart-checkout"
+      id="btnBuy"
+      data-item-id="jewelry-gold"
+      data-item-name="Pearl Kiss"
+      data-item-price="29.40"
+      data-item-url="https://maisonkiki.co/"
+      data-item-image="images/product-main.jpg"
+      data-item-custom1-name="Color"
+      data-item-custom1-value="Gold"
+      data-item-quantity="1">
+      BUY IT NOW
+    </a>
+
+    <!-- Description -->
+    <p class="prod-desc">A delicate gold-plated necklace featuring a lustrous natural freshwater pearl. The perfect everyday piece — subtle enough for layering, elegant enough to wear alone.</p>
+
+    <!-- ── Accordion ── -->
+    <div class="prod-accordion">
+      <details class="prod-detail-item" open>
+        <summary>Description</summary>
+        <div class="prod-detail-body">
+          <ul>
+            <li>Chain length: 16" + 2" extender</li>
+            <li>Pearl size: 6–7 mm freshwater pearl</li>
+            <li>Spring-ring clasp</li>
+            <li>Available in Gold and Silver finishes</li>
+          </ul>
+        </div>
+      </details>
+      <details class="prod-detail-item">
+        <summary>Materials</summary>
+        <div class="prod-detail-body">
+          <ul>
+            <li><strong>Gold:</strong> 18K gold-plated brass, nickel-free &amp; hypoallergenic</li>
+            <li><strong>Silver:</strong> Rhodium-plated brass, nickel-free &amp; hypoallergenic</li>
+            <li><strong>Pearl:</strong> Genuine freshwater pearl — each one naturally unique</li>
+          </ul>
+        </div>
+      </details>
+      <details class="prod-detail-item">
+        <summary>Shipping</summary>
+        <div class="prod-detail-body">
+          <p>Free standard shipping on all orders. Processing takes 1–2 business days.</p>
+          <ul>
+            <li>🇺🇸 United States: 5–10 business days</li>
+            <li>🌏 International: 10–20 business days</li>
+          </ul>
+        </div>
+      </details>
+      <details class="prod-detail-item">
+        <summary>Care Instructions</summary>
+        <div class="prod-detail-body">
+          <ul>
+            <li>Avoid contact with water, perfume, and lotions</li>
+            <li>Remove before showering, swimming, or exercising</li>
+            <li>Store in the included Maison Kiki pouch</li>
+            <li>Gently polish with the included soft cloth</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+  </div>
+
 </section>
 
 <!-- ====== About ====== -->
@@ -200,10 +195,13 @@ function sync() {
     b.setAttribute('data-item-image', img);
     b.setAttribute('data-item-quantity', qty);
   });
-  document.getElementById('featImg').src = img;
-  // sync thumbnails
-  document.querySelectorAll('.prod-thumb').forEach(t => {
-    t.classList.toggle('active', t.dataset.img === img);
+  // sync slides
+  document.querySelectorAll('.prod-slide').forEach(s => s.classList.remove('active'));
+  const activeSlide = color === 'Gold' ? 'slideGold' : 'slideSilver';
+  document.getElementById(activeSlide).classList.add('active');
+  // sync dots
+  document.querySelectorAll('.prod-dot').forEach(d => {
+    d.classList.toggle('active', d.dataset.slide === activeSlide);
   });
 }
 
@@ -217,13 +215,17 @@ document.getElementById('swatches').addEventListener('click', e => {
   sync();
 });
 
-// Thumbnail clicks
-document.querySelector('.prod-gallery').addEventListener('click', e => {
-  const t = e.target.closest('.prod-thumb');
-  if (!t) return;
-  document.querySelectorAll('.prod-thumb').forEach(el => el.classList.remove('active'));
-  t.classList.add('active');
-  document.getElementById('featImg').src = t.dataset.img;
+// Dot navigation
+document.querySelector('.prod-dots').addEventListener('click', e => {
+  const d = e.target.closest('.prod-dot');
+  if (!d) return;
+  const slideId = d.dataset.slide;
+  color = slideId === 'slideGold' ? 'Gold' : 'Silver';
+  document.getElementById('colorLabel').textContent = color;
+  document.querySelectorAll('.swatch').forEach(el => {
+    el.classList.toggle('selected', el.dataset.color === color);
+  });
+  sync();
 });
 
 document.getElementById('qtyMinus').addEventListener('click', () => { if (qty > 1) { qty--; updateQty(); } });
