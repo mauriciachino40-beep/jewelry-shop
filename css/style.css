@@ -101,7 +101,6 @@ button { cursor: pointer; font-family: inherit; }
 .hero-slides {
   position: relative;
   width: 100%;
-  overflow: hidden;
 }
 
 .hero-bg {
@@ -113,13 +112,10 @@ button { cursor: pointer; font-family: inherit; }
   transition: opacity .8s ease-in-out;
 }
 
-.hero-bg:first-child {
-  position: relative;
-}
-
 .hero-bg.active {
   opacity: 1;
   position: relative;
+  z-index: 1;
 }
 
 /* Hero dots */
