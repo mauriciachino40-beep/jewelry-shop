@@ -203,32 +203,24 @@ button { cursor: pointer; font-family: inherit; }
 }
 
 .prod-kicker {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--gray-400);
-  margin-bottom: 8px;
-}
-
-.prod-title {
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--navy);
-  line-height: 1.2;
   margin-bottom: 6px;
 }
 
 .prod-price {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 26px;
+  font-weight: 600;
   color: var(--navy);
   margin-bottom: 4px;
 }
 
 /* Discount / savings line */
 .prod-discount {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--gray-600);
   margin-bottom: 18px;
   min-height: 18px;
@@ -249,14 +241,14 @@ button { cursor: pointer; font-family: inherit; }
 
 /* Description */
 .prod-desc {
-  font-size: 13.5px;
+  font-size: 14.5px;
   color: var(--gray-600);
   line-height: 1.7;
   margin-top: 22px;
 }
 
 .prod-desc-accept {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--navy);
   margin-top: 4px;
@@ -264,15 +256,15 @@ button { cursor: pointer; font-family: inherit; }
 }
 
 .prod-desc-ship {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--gray-600);
   margin-top: 2px;
 }
 
 /* Color Swatches */
 .info-label {
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   color: var(--navy);
   margin-bottom: 10px;
 }
@@ -305,8 +297,8 @@ button { cursor: pointer; font-family: inherit; }
   margin-bottom: 18px;
 }
 .option-pill {
-  padding: 8px 18px;
-  font-size: 13px; font-weight: 500;
+  padding: 9px 18px;
+  font-size: 14px; font-weight: 500;
   color: var(--navy);
   background: var(--white);
   border: 1px solid var(--gray-200);
@@ -348,11 +340,11 @@ button { cursor: pointer; font-family: inherit; }
 /* Buttons */
 .btn-atc {
   display: block; width: 100%;
-  padding: 15px 24px;
+  padding: 16px 24px;
   background: var(--navy);
   color: var(--cream);
   border: none; border-radius: 4px;
-  font-size: 13px; font-weight: 700;
+  font-size: 14px; font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   transition: background .2s;
@@ -364,7 +356,7 @@ button { cursor: pointer; font-family: inherit; }
   display: block; width: 100%;
   margin-top: 10px;
   background: none; border: none;
-  font-size: 13px; color: var(--gray-600);
+  font-size: 14px; color: var(--gray-600);
   text-decoration: underline;
   cursor: pointer; padding: 8px 0;
   text-align: center;
@@ -379,7 +371,7 @@ button { cursor: pointer; font-family: inherit; }
   border-radius: 6px;
 }
 .sell-points-title {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--navy);
   margin-bottom: 12px;
@@ -394,7 +386,7 @@ button { cursor: pointer; font-family: inherit; }
   position: relative;
   padding-left: 20px;
   margin-bottom: 7px;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--gray-600);
   line-height: 1.6;
 }
@@ -419,7 +411,7 @@ button { cursor: pointer; font-family: inherit; }
 .prod-detail-item summary {
   display: flex; align-items: center; justify-content: space-between;
   padding: 15px 0;
-  font-size: 13.5px; font-weight: 600;
+  font-size: 14.5px; font-weight: 600;
   color: var(--navy);
   cursor: pointer;
   list-style: none;
@@ -438,7 +430,7 @@ button { cursor: pointer; font-family: inherit; }
 
 .prod-detail-body {
   padding: 0 0 16px 0;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--gray-600);
   line-height: 1.7;
 }
