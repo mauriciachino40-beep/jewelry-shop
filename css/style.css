@@ -499,8 +499,8 @@ button { cursor: pointer; font-family: inherit; }
   }
 }
 .quote-card {
-  padding: 14px 18px;
-  font-size: 13.5px;
+  padding: 16px 20px;
+  font-size: 15px;
   font-weight: 500;
   font-style: italic;
   color: var(--navy);
