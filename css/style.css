@@ -64,28 +64,32 @@ button { cursor: pointer; font-family: inherit; }
 .nav-inner {
   max-width: var(--max); margin: 0 auto;
   display: flex; align-items: baseline; justify-content: space-between;
-  padding: 16px 28px;
+  padding: 24px 40px;
+}
+@media (max-width: 767px) {
+  .nav-inner { padding: 20px 24px; }
 }
 .nav-logo {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   color: #fff;
   text-transform: uppercase;
 }
 .nav-links {
-  display: flex; align-items: center; gap: 28px;
+  display: flex; align-items: center; gap: 32px;
 }
 .nav-links a {
   font-size: 13px; font-weight: 400;
   color: rgba(255,255,255,.8);
   transition: color .15s;
+  letter-spacing: .5px;
 }
 .nav-links a:hover { color: #fff; }
 .nav-cart {
   background: none; border: none; padding: 0;
   font-size: 13px; color: rgba(255,255,255,.8);
-  display: flex; align-items: center; gap: 2px;
+  display: flex; align-items: center; gap: 4px;
   position: relative;
 }
 .nav-cart:hover { color: #fff; }
