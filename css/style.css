@@ -483,30 +483,36 @@ button { cursor: pointer; font-family: inherit; }
   margin-bottom: 20px;
 }
 
-/* Keyword highlights */
-.reviews-keywords {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+/* Testimonial quotes */
+.reviews-quotes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto 28px;
 }
-.kw-tag {
-  display: inline-block;
-  padding: 8px 16px;
-  font-size: 13px;
+@media (max-width: 767px) {
+  .reviews-quotes {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    padding: 0 16px;
+  }
+}
+.quote-card {
+  padding: 14px 18px;
+  font-size: 13.5px;
   font-weight: 500;
+  font-style: italic;
   color: var(--navy);
   background: var(--white);
-  border: 1px solid var(--gray-200);
-  border-radius: 20px;
-  white-space: nowrap;
-  transition: all .15s;
+  border-left: 3px solid var(--gold);
+  border-radius: 0 6px 6px 0;
+  line-height: 1.5;
+  transition: transform .15s, box-shadow .15s;
 }
-.kw-tag:hover {
-  border-color: var(--gold);
-  background: var(--cream);
+.quote-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
 }
 
 .reviews-grid {
