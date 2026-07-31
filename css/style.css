@@ -134,12 +134,13 @@ button { cursor: pointer; font-family: inherit; }
 
 /* ── Product Detail ── */
 .prod-detail {
-  max-width: var(--max); margin: 0 auto;
-  padding: 64px 40px 80px;
+  max-width: 1080px; margin: 0 auto;
+  padding: 64px 48px 80px;
 }
 
 .prod-layout {
-  display: flex; gap: 64px;
+  display: flex; flex-wrap: nowrap; flex-direction: row;
+  gap: 56px;
   align-items: flex-start;
 }
 @media (max-width: 767px) {
@@ -152,12 +153,13 @@ button { cursor: pointer; font-family: inherit; }
 
 /* Gallery */
 .prod-gallery {
-  flex: 0 0 48%;
+  flex: 0 0 46%;
+  max-width: 46%;
   position: sticky; top: 100px;
 }
 @media (max-width: 767px) {
   .prod-gallery {
-    flex: auto; position: static;
+    flex: auto; max-width: none; position: static;
   }
 }
 
