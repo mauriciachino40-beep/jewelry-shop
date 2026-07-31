@@ -223,7 +223,28 @@ button { cursor: pointer; font-family: inherit; }
   font-size: 18px;
   font-weight: 500;
   color: var(--navy);
-  margin-bottom: 20px;
+  margin-bottom: 4px;
+}
+
+/* Discount / savings line */
+.prod-discount {
+  font-size: 13px;
+  color: var(--gray-600);
+  margin-bottom: 18px;
+  min-height: 18px;
+}
+.prod-discount del {
+  color: var(--gray-400);
+  text-decoration: line-through;
+  margin-right: 6px;
+}
+.prod-discount .save {
+  color: #c0392b;
+  font-weight: 600;
+  margin: 0 4px;
+}
+.prod-discount .each {
+  color: var(--gray-600);
 }
 
 /* Description */
