@@ -234,6 +234,20 @@ button { cursor: pointer; font-family: inherit; }
   margin-top: 22px;
 }
 
+.prod-desc-accept {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-top: 4px;
+  letter-spacing: .3px;
+}
+
+.prod-desc-ship {
+  font-size: 13px;
+  color: var(--gray-600);
+  margin-top: 2px;
+}
+
 /* Color Swatches */
 .info-label {
   font-size: 13px;

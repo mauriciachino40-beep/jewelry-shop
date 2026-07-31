@@ -48,7 +48,7 @@
     <!-- ── Left: Image Gallery ── -->
     <div class="prod-gallery">
       <div class="prod-slides">
-        <img src="images/product-main.jpg" alt="Pearl Kiss — Gold" class="prod-slide active" id="slideGold">
+        <img src="images/jewelry-bulk.jpg" alt="Jewelry" class="prod-slide active" id="slideGold">
         <img src="images/product-silver.jpg" alt="Pearl Kiss — Silver" class="prod-slide" id="slideSilver">
       </div>
       <div class="prod-dots">
@@ -59,64 +59,72 @@
 
     <!-- ── Right: Info ── -->
     <div class="prod-info">
-      <p class="prod-kicker">Everyday Essential</p>
+      <p class="prod-kicker">Live Sale Exclusive</p>
       <h2 class="prod-title">Pearl Kiss</h2>
-      <p class="prod-price">$29.40</p>
+      <p class="prod-price" id="prodPrice">$40.00</p>
 
-      <!-- Color -->
-      <p class="info-label">Color — <strong id="colorLabel">Gold</strong></p>
-      <div class="swatches" id="swatches">
-        <button class="swatch swatch-gold selected" data-color="Gold" data-img="images/product-main.jpg" data-slide="slideGold"></button>
-        <button class="swatch swatch-silver" data-color="Silver" data-img="images/product-silver.jpg" data-slide="slideSilver"></button>
-      </div>
+      <div class="prod-options" id="prodOptions">
+        <!-- Bulk Jewelry -->
+        <p class="info-label">Bulk Jewelry</p>
+        <div class="option-pills">
+          <button class="option-pill selected" data-name="Jewelry — 1pcs" data-price="40" data-img="images/jewelry-bulk.jpg">1pcs — $40</button>
+          <button class="option-pill" data-name="Jewelry — 2pcs" data-price="72" data-img="images/jewelry-bulk.jpg">2pcs — $72</button>
+          <button class="option-pill" data-name="Jewelry — 3pcs" data-price="102" data-img="images/jewelry-bulk.jpg">3pcs — $102</button>
+          <button class="option-pill" data-name="Jewelry — 4pcs" data-price="128" data-img="images/jewelry-bulk.jpg">4pcs — $128</button>
+          <button class="option-pill" data-name="Jewelry — 5pcs" data-price="166" data-img="images/jewelry-bulk.jpg">5pcs — $166</button>
+          <button class="option-pill" data-name="Jewelry — 6pcs" data-price="192" data-img="images/jewelry-bulk.jpg">6pcs — $192</button>
+          <button class="option-pill" data-name="Jewelry — 7pcs" data-price="224" data-img="images/jewelry-bulk.jpg">7pcs — $224</button>
+          <button class="option-pill" data-name="Jewelry — 8pcs" data-price="255" data-img="images/jewelry-bulk.jpg">8pcs — $255</button>
+        </div>
 
-      <!-- Chain Length -->
-      <p class="info-label">Chain Length — <strong id="lengthLabel">16" + 2" extender</strong></p>
-      <div class="option-pills" id="lengthOptions">
-        <button class="option-pill selected" data-length='16" + 2" extender'>16" + 2"</button>
-        <button class="option-pill" data-length='18" + 2" extender'>18" + 2"</button>
-        <button class="option-pill" data-length='20" + 2" extender'>20" + 2"</button>
-      </div>
+        <!-- Special Items -->
+        <p class="info-label">Special Items</p>
+        <div class="option-pills">
+          <button class="option-pill" data-name="10 motifs necklace" data-price="59" data-img="images/necklace-10motifs.jpg">10 motifs necklace — $59</button>
+          <button class="option-pill" data-name="Slim nail bangle" data-price="59" data-img="images/bangle-slim.jpg">Slim nail bangle — $59</button>
+          <button class="option-pill" data-name="Ct unlimited love bracelet" data-price="75" data-img="images/bracelet-love.jpg">Ct unlimited love bracelet — $75</button>
+        </div>
 
-      <!-- Qty -->
-      <div class="qty-box">
-        <button class="qty-btn" id="qtyMinus">−</button>
-        <span class="qty-val" id="qtyVal">1</span>
-        <button class="qty-btn" id="qtyPlus">+</button>
+        <!-- Original Box -->
+        <p class="info-label">Original Box</p>
+        <div class="option-pills">
+          <button class="option-pill" data-name="Box — 1 motif necklace &amp; earpins" data-price="9" data-img="images/box-necklace.jpg">1 motif necklace &amp; earpins — $9</button>
+          <button class="option-pill" data-name="Box — bracelet gift box" data-price="15" data-img="images/box-bracelet.jpg">Bracelet gift box — $15</button>
+          <button class="option-pill" data-name="Box — bracelet pouch" data-price="18" data-img="images/box-pouch.jpg">Bracelet pouch — $18</button>
+          <button class="option-pill" data-name="Box — 10 motifs necklace" data-price="21" data-img="images/box-necklace10.jpg">10 motifs necklace — $21</button>
+          <button class="option-pill" data-name="Box — earclips" data-price="14" data-img="images/box-earclips.jpg">Earclips — $14</button>
+        </div>
       </div>
 
       <!-- Buttons -->
       <button class="btn-atc snipcart-add-item"
         id="btnATC"
-        data-item-id="jewelry-gold"
-        data-item-name="Pearl Kiss"
-        data-item-price="29.40"
+        data-item-id="jewelry-1pcs"
+        data-item-name="Jewelry — 1pcs"
+        data-item-price="40.00"
         data-item-url="https://maisonkiki.co/"
-        data-item-image="images/product-main.jpg"
-        data-item-custom1-name="Color"
-        data-item-custom1-value="Gold"
-        data-item-custom2-name="Chain Length"
-        data-item-custom2-value='16" + 2" extender'
+        data-item-image="images/jewelry-bulk.jpg"
         data-item-quantity="1">
         ADD TO CART
       </button>
 
       <a href="#" class="btn-buy snipcart-add-item snipcart-checkout"
         id="btnBuy"
-        data-item-id="jewelry-gold"
-        data-item-name="Pearl Kiss"
-        data-item-price="29.40"
+        data-item-id="jewelry-1pcs"
+        data-item-name="Jewelry — 1pcs"
+        data-item-price="40.00"
         data-item-url="https://maisonkiki.co/"
-        data-item-image="images/product-main.jpg"
-        data-item-custom1-name="Color"
-        data-item-custom1-value="Gold"
-        data-item-custom2-name="Chain Length"
-        data-item-custom2-value='16" + 2" extender'
+        data-item-image="images/jewelry-bulk.jpg"
         data-item-quantity="1">
         BUY IT NOW
       </a>
 
       <!-- Product Intro -->
+      <p class="prod-desc">Choose color and design with the host, and directly pay for right amount.</p>
+      <p class="prod-desc-accept">Accept PAYPAL &amp; CREDIT CARDS !!</p>
+      <p class="prod-desc-ship">7–14 days ship to the US.</p>
+
+      <!-- Existing description (kept) -->
       <p class="prod-desc">A delicate gold-plated necklace featuring a lustrous natural freshwater pearl. The perfect everyday piece — subtle enough for layering, elegant enough to wear alone. Each pearl is hand-selected for its unique iridescence, making every necklace one of a kind.</p>
 
       <!-- ── Accordion ── -->
@@ -198,66 +206,49 @@
 
 <!-- ====== JS ====== -->
 <script>
-const IMGS = { 'Gold': 'images/product-main.jpg', 'Silver': 'images/product-silver.jpg' };
-let color = 'Gold', qty = 1, chainLen = '16" + 2" extender';
+let selectedName = 'Jewelry — 1pcs';
+let selectedPrice = '40.00';
+let selectedImg  = 'images/jewelry-bulk.jpg';
 
 function sync() {
-  const img = IMGS[color], id = 'jewelry-' + color.toLowerCase();
+  const id = selectedName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '');
   ['btnATC','btnBuy'].forEach(s => {
     const b = document.getElementById(s);
     b.setAttribute('data-item-id', id);
-    b.setAttribute('data-item-custom1-value', color);
-    b.setAttribute('data-item-custom2-value', chainLen);
-    b.setAttribute('data-item-image', img);
-    b.setAttribute('data-item-quantity', qty);
+    b.setAttribute('data-item-name', selectedName);
+    b.setAttribute('data-item-price', selectedPrice);
+    b.setAttribute('data-item-image', selectedImg);
+    b.setAttribute('data-item-quantity', '1');
   });
-  // sync slides
-  document.querySelectorAll('.prod-slide').forEach(s => s.classList.remove('active'));
-  const activeSlide = color === 'Gold' ? 'slideGold' : 'slideSilver';
-  document.getElementById(activeSlide).classList.add('active');
-  // sync dots
-  document.querySelectorAll('.prod-dot').forEach(d => {
-    d.classList.toggle('active', d.dataset.slide === activeSlide);
-  });
+  document.getElementById('prodPrice').textContent = '$' + parseFloat(selectedPrice).toFixed(2);
 }
 
-document.getElementById('swatches').addEventListener('click', e => {
-  const s = e.target.closest('.swatch');
-  if (!s) return;
-  document.querySelectorAll('.swatch').forEach(el => el.classList.remove('selected'));
-  s.classList.add('selected');
-  color = s.dataset.color;
-  document.getElementById('colorLabel').textContent = color;
-  sync();
-});
-
-// Chain length pills
-document.getElementById('lengthOptions').addEventListener('click', e => {
+// Option pill selection — one active across all groups + switch image
+document.getElementById('prodOptions').addEventListener('click', e => {
   const p = e.target.closest('.option-pill');
   if (!p) return;
-  document.querySelectorAll('#lengthOptions .option-pill').forEach(el => el.classList.remove('selected'));
+  document.querySelectorAll('#prodOptions .option-pill').forEach(el => el.classList.remove('selected'));
   p.classList.add('selected');
-  chainLen = p.dataset.length;
-  document.getElementById('lengthLabel').textContent = chainLen;
+  selectedName  = p.dataset.name;
+  selectedPrice = p.dataset.price;
+  selectedImg   = p.dataset.img;
+  // Switch the active slide image
+  const activeSlide = document.querySelector('.prod-slide.active');
+  if (activeSlide) activeSlide.src = selectedImg;
   sync();
 });
 
-// Dot navigation
+// Dot navigation (manual image browsing)
 document.querySelector('.prod-dots').addEventListener('click', e => {
   const d = e.target.closest('.prod-dot');
   if (!d) return;
   const slideId = d.dataset.slide;
-  color = slideId === 'slideGold' ? 'Gold' : 'Silver';
-  document.getElementById('colorLabel').textContent = color;
-  document.querySelectorAll('.swatch').forEach(el => {
-    el.classList.toggle('selected', el.dataset.color === color);
+  document.querySelectorAll('.prod-slide').forEach(s => s.classList.remove('active'));
+  document.getElementById(slideId).classList.add('active');
+  document.querySelectorAll('.prod-dot').forEach(dot => {
+    dot.classList.toggle('active', dot.dataset.slide === slideId);
   });
-  sync();
 });
-
-document.getElementById('qtyMinus').addEventListener('click', () => { if (qty > 1) { qty--; updateQty(); } });
-document.getElementById('qtyPlus').addEventListener('click',  () => { if (qty < 99){ qty++; updateQty(); } });
-function updateQty() { document.getElementById('qtyVal').textContent = qty; sync(); }
 
 sync();
 </script>
